@@ -1,0 +1,152 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.isk</groupId>
+  <artifactId>pjba</artifactId>
+  <version>0.1</version>
+  <packaging>jar</packaging>
+  <name>pjba</name>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.build.resourceEncoding>UTF-8</project.build.resourceEncoding>
+    <jdk.version>1.8</jdk.version>
+
+    <!--+== Versions ==+ -->
+    <!-- Dependencies -->
+    <junit.version>4.12</junit.version>
+    <assertj.version>3.2.0</assertj.version>
+
+    <!-- Plugins -->
+    <gmaven-plugin.version>1.5</gmaven-plugin.version>
+    <maven-clean-plugin.version>3.0.0</maven-clean-plugin.version>
+    <maven-resources-plugin.version>2.7</maven-resources-plugin.version>
+    <maven-compiler-plugin.version>3.3</maven-compiler-plugin.version>
+    <maven-surefire-plugin.version>2.19</maven-surefire-plugin.version>
+    <maven-jar-plugin.version>2.6</maven-jar-plugin.version>
+    <maven-install-plugin.version>2.5.2</maven-install-plugin.version>
+    <maven-javadoc-plugin.version>2.10.3</maven-javadoc-plugin.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${junit.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.assertj</groupId>
+      <artifactId>assertj-core</artifactId>
+      <version>${assertj.version}</version>
+      <scope>test</scope>
+    </dependency>
+
+  </dependencies>
+
+  <build>
+    <finalName>${project.name}-${project.version}-${githash}</finalName>
+
+    <plugins>
+      <!-- http://maven.apache.org/plugins/maven-clean-plugin/ -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-clean-plugin</artifactId>
+        <version>${maven-clean-plugin.version}</version>
+      </plugin>
+
+      <!-- http://maven.apache.org/plugins/maven-resources-plugin/ -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>${maven-resources-plugin.version}</version>
+        <configuration>
+          <encoding>${project.build.resourceEncoding}</encoding>
+        </configuration>
+      </plugin>
+
+      <!-- http://maven.apache.org/plugins/maven-compiler-plugin/ -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>${maven-compiler-plugin.version}</version>
+        <configuration>
+          <source>${jdk.version}</source>
+          <target>${jdk.version}</target>
+          <encoding>${project.build.sourceEncoding}</encoding> <!-- Default, but does no harm -->
+        </configuration>
+      </plugin>
+
+      <!-- http://maven.apache.org/surefire/maven-surefire-plugin/ -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>${maven-surefire-plugin.version}</version>
+      </plugin>
+
+      <!-- http://docs.codehaus.org/display/GMAVEN/Home -->
+      <!-- Obsolete plugin, but does the job as intended -->
+      <!--
+        We want to execute a shell command to get the abbreviate hash
+        of the last commit and set the result into a property (githash)
+        accessible from the assembly plugin
+      -->
+      <plugin>
+        <groupId>org.codehaus.gmaven</groupId>
+        <artifactId>gmaven-plugin</artifactId>
+        <version>${gmaven-plugin.version}</version>
+        <executions>
+          <execution>
+            <phase>validate</phase>
+            <goals>
+              <goal>execute</goal>
+            </goals>
+            <configuration>
+              <properties>
+                <script>git rev-parse --short HEAD</script>
+              </properties>
+              <source>
+                def command = project.properties.script
+                def process = command.execute()
+                process.waitFor()
+                def githash = process.in.text.trim()
+                project.properties.setProperty('githash', githash)
+              </source>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+      <!-- http://maven.apache.org/plugins/maven-jar-plugin/ -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>${maven-jar-plugin.version}</version>
+      </plugin>
+
+      <!-- http://maven.apache.org/plugins/maven-install-plugin/ -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-install-plugin</artifactId>
+        <version>${maven-install-plugin.version}</version>
+      </plugin>
+
+      <!-- http://maven.apache.org/plugins/maven-javadoc-plugin/ -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>${maven-javadoc-plugin.version}</version>
+        <executions>
+          <execution>
+            <phase>install</phase>
+            <goals>
+              <goal>aggregate</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>
