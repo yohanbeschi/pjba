@@ -1,0 +1,10 @@
+@ Comment 
+.class public final Test
+  .method public methodName(I[[Lorg/isk/pjb/Test;Z)V
+    ldc /* comment */ 1
+    ldc .0f
+    ldc "Hello World"
+    areturn
+    # comment
+  .methodend
+.classend
