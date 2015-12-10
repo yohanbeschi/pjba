@@ -39,7 +39,6 @@ public class ClassFile implements Visitable {
   }
 
   public ClassFile(final String fullyQualifiedName) {
-    this.fullyQualifiedJavaClassName = fullyQualifiedName.replace(Ascii.SLASH, Ascii.PERIOD);
     this.parseName(fullyQualifiedName);
 
     this.constantPool.add(null); // Index 0 reserved by the JVM
@@ -59,6 +58,7 @@ public class ClassFile implements Visitable {
   // -------------------------------------------------------------------------------------------------------------------
 
   private void parseName(final String fullyQualifiedName) {
+    this.fullyQualifiedJavaClassName = fullyQualifiedName.replace(Ascii.SLASH, Ascii.PERIOD);
     int index = fullyQualifiedName.lastIndexOf(Ascii.SLASH);
 
     if (index >= 0) {

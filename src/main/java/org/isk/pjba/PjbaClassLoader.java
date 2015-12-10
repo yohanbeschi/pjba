@@ -20,7 +20,7 @@ public class PjbaClassLoader extends ClassLoader {
   }
 
   @Override
-  protected Class<?> findClass(final String name) throws ClassNotFoundException {
+  public Class<?> findClass(final String name) throws ClassNotFoundException {
     Class<?> clazz = this.loaded.get(name);
     if (null != clazz) {
       return clazz;
