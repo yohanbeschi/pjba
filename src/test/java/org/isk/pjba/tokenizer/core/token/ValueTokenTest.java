@@ -83,7 +83,7 @@ public class ValueTokenTest {
     assertThat(token1.startColumn()).isEqualTo(1);
     assertThat(token1.endColumn()).isEqualTo(3);
     assertThat(token1.errors()).hasSize(2);
-    assertThat(token1.errors()).extracting(e -> e.errorType()).containsExactly(CoreErrorType.INVALID_TOKEN,
+    assertThat(token1.errors()).extracting(e -> e.errorType()).containsOnly(CoreErrorType.INVALID_TOKEN,
         CoreErrorType.UNDEFINED_TOKEN);
 
     this.testClearedToken(token2);
@@ -110,7 +110,7 @@ public class ValueTokenTest {
     assertThat(token1.startColumn()).isEqualTo(1);
     assertThat(token1.endColumn()).isEqualTo(9);
     assertThat(token1.errors()).hasSize(2);
-    assertThat(token1.errors()).extracting(e -> e.errorType()).containsExactly(CoreErrorType.INVALID_TOKEN,
+    assertThat(token1.errors()).extracting(e -> e.errorType()).containsOnly(CoreErrorType.INVALID_TOKEN,
         CoreErrorType.UNDEFINED_TOKEN);
 
     this.testClearedToken(token2);
