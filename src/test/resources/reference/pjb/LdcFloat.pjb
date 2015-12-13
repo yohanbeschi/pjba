@@ -1,0 +1,6 @@
+.class public super LdcFloat
+  .method public static ldc_float()F
+    ldc 3.5f
+    freturn
+  .methodend
+.classend

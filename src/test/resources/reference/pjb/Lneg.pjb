@@ -1,0 +1,7 @@
+.class public super Lneg
+  .method public static lneg(J)J
+    lload_0
+    lneg
+    lreturn
+  .methodend
+.classend

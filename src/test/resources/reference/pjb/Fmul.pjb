@@ -1,0 +1,8 @@
+.class public super Fmul
+  .method public static fmul(FF)F
+    fload_0
+    fload_1
+    fmul
+    freturn
+  .methodend
+.classend

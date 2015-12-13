@@ -1,0 +1,7 @@
+.class public super I2B
+  .method public static i2b(I)I
+    iload_0
+    i2b
+    ireturn
+  .methodend
+.classend

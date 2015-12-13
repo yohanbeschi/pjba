@@ -1,0 +1,10 @@
+.class public super I2F
+  .method public static i2f(II)F
+    iload_0
+    i2f
+    iload_1
+    i2f
+    fdiv
+    freturn
+  .methodend
+.classend

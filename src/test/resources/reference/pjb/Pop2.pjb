@@ -1,0 +1,9 @@
+.class public super Pop2
+  .method public static pop2()I
+    iconst_3
+    iconst_1
+    iconst_1
+    pop2
+    ireturn
+  .methodend
+.classend

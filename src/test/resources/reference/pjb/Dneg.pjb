@@ -1,0 +1,7 @@
+.class public super Dneg
+  .method public static dneg(D)D
+    dload_0
+    dneg
+    dreturn
+  .methodend
+.classend

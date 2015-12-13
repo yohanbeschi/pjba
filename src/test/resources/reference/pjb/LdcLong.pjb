@@ -1,0 +1,6 @@
+.class public super LdcLong
+  .method public static ldc2_w_long()J
+    ldc2_w 167980564900l
+    lreturn
+  .methodend
+.classend

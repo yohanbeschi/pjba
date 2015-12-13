@@ -210,8 +210,15 @@ public abstract class ParameterizedClassFile {
   }
 
   protected InputStream getReferenceClass(final String javaClass) {
-    return Thread.currentThread().getContextClassLoader()
-        .getResourceAsStream("reference/class/" + javaClass + ".class");
+    return this.getResource("reference/class/" + javaClass + ".class");
+  }
+
+  protected InputStream getReferencePjb(final String javaClass) {
+    return this.getResource("reference/pjb/" + javaClass + ".pjb");
+  }
+
+  private InputStream getResource(final String path) {
+    return Thread.currentThread().getContextClassLoader().getResourceAsStream(path);
   }
 
   protected byte[] toBytes(final InputStream inputStream) {

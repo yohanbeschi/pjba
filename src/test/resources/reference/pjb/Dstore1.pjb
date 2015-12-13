@@ -1,0 +1,14 @@
+.class public super Dstore1
+  .method public static dstore_1(FD)D
+    dload_1
+    ldc 5.0f
+    f2d
+    dadd
+    dstore_1
+    fload_0
+    f2d
+    dload_1
+    dadd
+    dreturn
+  .methodend
+.classend

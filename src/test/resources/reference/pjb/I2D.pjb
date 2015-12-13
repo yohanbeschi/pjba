@@ -1,0 +1,10 @@
+.class public super I2D
+  .method public static i2d(II)D
+    iload_0
+    i2d
+    iload_1
+    i2d
+    ddiv
+    dreturn
+  .methodend
+.classend

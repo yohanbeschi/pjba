@@ -1,0 +1,8 @@
+.class public super Iand
+  .method public static iand(II)I
+    iload_0
+    iload_1
+    iand
+    ireturn
+  .methodend
+.classend

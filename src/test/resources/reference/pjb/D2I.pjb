@@ -1,0 +1,7 @@
+.class public super D2I
+  .method public static d2i(D)I
+    dload_0
+    d2i
+    ireturn
+  .methodend
+.classend

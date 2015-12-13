@@ -1,0 +1,6 @@
+.class public super Fload
+  .method public static fload(ZZZZZZZZZZF)F
+    fload 10
+    freturn
+  .methodend
+.classend

@@ -1,0 +1,8 @@
+.class public super AstoreLoadUnsigned
+  .method public static astore_load_unsigned()Ljava/lang/Object;
+    aconst_null
+    astore 175
+    aload 175
+    areturn
+  .methodend
+.classend

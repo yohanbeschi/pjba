@@ -1,0 +1,8 @@
+.class public super Idiv
+  .method public static idiv(II)I
+    iload_0
+    iload_1
+    idiv
+    ireturn
+  .methodend
+.classend

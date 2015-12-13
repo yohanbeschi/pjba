@@ -1,0 +1,9 @@
+.class public super F2D
+  .method public static f2d(FD)D
+    fload_0
+    f2d
+    dload_1
+    dadd
+    dreturn
+  .methodend
+.classend

@@ -1,0 +1,6 @@
+.class public super IConstM1
+  .method public static iconst_m1()I
+    iconst_m1
+    ireturn
+  .methodend
+.classend

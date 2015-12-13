@@ -1,0 +1,8 @@
+.class public super Lrem
+  .method public static lrem(JJ)J
+    lload_0
+    lload_2
+    lrem
+    lreturn
+  .methodend
+.classend

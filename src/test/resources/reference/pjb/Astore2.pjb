@@ -1,0 +1,8 @@
+.class public super Astore2
+  .method public static astore_2(Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)Ljava/lang/Integer;
+    aload_0
+    astore_2
+    aload_2
+    areturn
+  .methodend
+.classend

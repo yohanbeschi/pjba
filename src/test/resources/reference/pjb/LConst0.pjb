@@ -1,0 +1,6 @@
+.class public super LConst0
+  .method public static lconst_0()J
+    lconst_0
+    lreturn
+  .methodend
+.classend

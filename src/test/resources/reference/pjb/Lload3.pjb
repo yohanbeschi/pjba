@@ -1,0 +1,6 @@
+.class public super Lload3
+  .method public static lload_3(ZZZJ)J
+    lload_3
+    lreturn
+  .methodend
+.classend

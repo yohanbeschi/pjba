@@ -1,0 +1,8 @@
+.class public super Dmul
+  .method public static dmul(DD)D
+    dload_0
+    dload_2
+    dmul
+    dreturn
+  .methodend
+.classend

@@ -1,0 +1,8 @@
+.class public super Lsub
+  .method public static lsub(JJ)J
+    lload_0
+    lload_2
+    lsub
+    lreturn
+  .methodend
+.classend

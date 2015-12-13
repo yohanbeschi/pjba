@@ -1,0 +1,8 @@
+.class public super Lshl
+  .method public static lshl(JI)J
+    lload_0
+    iload_2
+    lshl
+    lreturn
+  .methodend
+.classend

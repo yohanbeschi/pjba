@@ -1,0 +1,8 @@
+.class public super Ladd
+  .method public static ladd(JJ)J
+    lload_0
+    lload_2
+    ladd
+    lreturn
+  .methodend
+.classend

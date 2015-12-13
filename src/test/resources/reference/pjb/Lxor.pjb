@@ -1,0 +1,8 @@
+.class public super Lxor
+  .method public static lxor(JJ)J
+    lload_0
+    lload_2
+    lxor
+    lreturn
+  .methodend
+.classend

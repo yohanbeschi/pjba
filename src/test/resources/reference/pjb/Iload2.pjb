@@ -1,0 +1,6 @@
+.class public super Iload2
+  .method public static iload_2(ZZI)I
+    iload_2
+    ireturn
+  .methodend
+.classend

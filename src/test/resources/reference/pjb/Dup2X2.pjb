@@ -1,0 +1,10 @@
+.class public super Dup2X2
+  .method public static dup2_x2()D
+    dconst_0
+    dconst_1
+    dup2_x2
+    pop2
+    pop2
+    dreturn
+  .methodend
+.classend

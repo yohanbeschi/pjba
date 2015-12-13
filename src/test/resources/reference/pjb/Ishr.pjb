@@ -1,0 +1,8 @@
+.class public super Ishr
+  .method public static ishr(II)I
+    iload_0
+    iload_1
+    ishr
+    ireturn
+  .methodend
+.classend

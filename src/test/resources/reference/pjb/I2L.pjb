@@ -1,0 +1,9 @@
+.class public super I2L
+  .method public static i2l(IJ)J
+    iload_0
+    i2l
+    lload_1
+    ladd
+    lreturn
+  .methodend
+.classend

@@ -1,0 +1,8 @@
+.class public super Land
+  .method public static land(JJ)J
+    lload_0
+    lload_2
+    land
+    lreturn
+  .methodend
+.classend

@@ -1,0 +1,10 @@
+.class public super L2D
+  .method public static l2d(JJ)D
+    lload_0
+    l2d
+    lload_2
+    l2d
+    ddiv
+    dreturn
+  .methodend
+.classend

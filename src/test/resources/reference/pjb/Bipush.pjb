@@ -1,0 +1,6 @@
+.class public super Bipush
+  .method public static bipush()I
+    bipush 125
+    ireturn
+  .methodend
+.classend

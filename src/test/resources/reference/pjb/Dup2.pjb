@@ -1,0 +1,8 @@
+.class public super Dup2
+  .method public static dup2()D
+    dconst_1
+    dup2
+    dadd
+    dreturn
+  .methodend
+.classend

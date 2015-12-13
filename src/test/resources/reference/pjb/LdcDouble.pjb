@@ -1,0 +1,6 @@
+.class public super LdcDouble
+  .method public static ldc2_w_double()D
+    ldc2_w 3.578978979
+    dreturn
+  .methodend
+.classend

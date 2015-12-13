@@ -1,0 +1,8 @@
+.class public super DstoreLoadUnsigned
+  .method public static dstore_load_unsigned()D
+    ldc2_w 33.33
+    dstore 210
+    dload 210
+    dreturn
+  .methodend
+.classend

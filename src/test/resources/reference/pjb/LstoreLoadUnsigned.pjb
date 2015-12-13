@@ -1,0 +1,8 @@
+.class public super LstoreLoadUnsigned
+  .method public static lstore_load_unsigned()J
+    ldc2_w 7687000l
+    lstore 199
+    lload 199
+    lreturn
+  .methodend
+.classend

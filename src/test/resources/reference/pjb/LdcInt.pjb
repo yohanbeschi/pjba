@@ -1,0 +1,6 @@
+.class public super LdcInt
+  .method public static ldc_int()I
+    ldc 167980564
+    ireturn
+  .methodend
+.classend

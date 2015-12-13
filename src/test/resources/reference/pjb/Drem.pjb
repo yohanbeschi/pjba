@@ -1,0 +1,8 @@
+.class public super Drem
+  .method public static drem(DD)D
+    dload_0
+    dload_2
+    drem
+    dreturn
+  .methodend
+.classend

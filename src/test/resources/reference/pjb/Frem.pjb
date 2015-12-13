@@ -1,0 +1,8 @@
+.class public super Frem
+  .method public static frem(FF)F
+    fload_0
+    fload_1
+    frem
+    freturn
+  .methodend
+.classend

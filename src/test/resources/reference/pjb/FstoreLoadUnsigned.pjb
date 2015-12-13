@@ -1,0 +1,8 @@
+.class public super FstoreLoadUnsigned
+  .method public static fstore_load_unsigned()F
+    ldc 134.89f
+    fstore 142
+    fload 142
+    freturn
+  .methodend
+.classend

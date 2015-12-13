@@ -1,0 +1,8 @@
+.class public super Istore
+  .method public static istore(IZZZZZZZZZI)I
+    iload_0
+    istore 10
+    iload 10
+    ireturn
+  .methodend
+.classend

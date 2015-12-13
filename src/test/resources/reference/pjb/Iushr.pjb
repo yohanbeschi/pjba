@@ -1,0 +1,8 @@
+.class public super Iushr
+  .method public static iushr(II)I
+    iload_0
+    iload_1
+    iushr
+    ireturn
+  .methodend
+.classend

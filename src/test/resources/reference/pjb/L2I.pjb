@@ -1,0 +1,7 @@
+.class public super L2I
+  .method public static l2i(J)I
+    lload_0
+    l2i
+    ireturn
+  .methodend
+.classend

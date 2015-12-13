@@ -1,0 +1,8 @@
+.class public super Pop
+  .method public static pop()D
+    dconst_0
+    iconst_1
+    pop
+    dreturn
+  .methodend
+.classend

@@ -1,0 +1,8 @@
+.class public super Dsub
+  .method public static dsub(DD)D
+    dload_0
+    dload_2
+    dsub
+    dreturn
+  .methodend
+.classend

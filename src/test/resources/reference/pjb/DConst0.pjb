@@ -1,0 +1,6 @@
+.class public super DConst0
+  .method public static dconst_0()D
+    dconst_0
+    dreturn
+  .methodend
+.classend

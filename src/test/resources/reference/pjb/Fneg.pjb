@@ -1,0 +1,7 @@
+.class public super Fneg
+  .method public static fneg(F)F
+    fload_0
+    fneg
+    freturn
+  .methodend
+.classend

@@ -1,0 +1,6 @@
+.class public super Nop
+  .method public static nop()V
+    nop
+    return
+  .methodend
+.classend

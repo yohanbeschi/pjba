@@ -1,0 +1,6 @@
+.class public super LdcString
+  .method public static ldc_string()Ljava/lang/String;
+    ldc "Hello World"
+    areturn
+  .methodend
+.classend

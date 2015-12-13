@@ -1,0 +1,6 @@
+.class public super Aload2
+  .method public static aload_2(ZZLjava/lang/Integer;)Ljava/lang/Integer;
+    aload_2
+    areturn
+  .methodend
+.classend

@@ -1,0 +1,10 @@
+.class public super L2F
+  .method public static l2f(JJ)F
+    lload_0
+    l2f
+    lload_2
+    l2f
+    fdiv
+    freturn
+  .methodend
+.classend

@@ -1,0 +1,10 @@
+.class public super Dstore2
+  .method public static dstore_2(DDD)D
+    dload_0
+    dstore_2
+    dload 4
+    dload_2
+    dadd
+    dreturn
+  .methodend
+.classend

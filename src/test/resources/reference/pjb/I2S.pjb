@@ -1,0 +1,7 @@
+.class public super I2S
+  .method public static i2s(I)I
+    iload_0
+    i2s
+    ireturn
+  .methodend
+.classend

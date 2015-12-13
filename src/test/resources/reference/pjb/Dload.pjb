@@ -1,0 +1,6 @@
+.class public super Dload
+  .method public static dload(ZZZZZZZZZZD)D
+    dload 10
+    dreturn
+  .methodend
+.classend

@@ -1,0 +1,9 @@
+.class public super D2F
+  .method public static d2f(DF)F
+    dload_0
+    d2f
+    fload_2
+    fadd
+    freturn
+  .methodend
+.classend

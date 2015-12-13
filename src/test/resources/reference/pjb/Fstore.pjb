@@ -1,0 +1,8 @@
+.class public super Fstore
+  .method public static fstore(FZZZZZZZZZF)F
+    fload_0
+    fstore 10
+    fload 10
+    freturn
+  .methodend
+.classend

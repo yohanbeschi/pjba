@@ -1,0 +1,6 @@
+.class public super Iload
+  .method public static iload(ZZZZZZZZZZI)I
+    iload 10
+    ireturn
+  .methodend
+.classend

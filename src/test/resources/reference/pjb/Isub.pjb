@@ -1,0 +1,8 @@
+.class public super Isub
+  .method public static isub(II)I
+    iload_0
+    iload_1
+    isub
+    ireturn
+  .methodend
+.classend

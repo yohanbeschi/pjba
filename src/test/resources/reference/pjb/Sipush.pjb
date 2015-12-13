@@ -1,0 +1,6 @@
+.class public super Sipush
+  .method public static sipush()I
+    sipush 5396
+    ireturn
+  .methodend
+.classend

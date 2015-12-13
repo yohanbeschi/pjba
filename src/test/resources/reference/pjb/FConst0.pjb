@@ -1,0 +1,6 @@
+.class public super FConst0
+  .method public static fconst_0()F
+    fconst_0
+    freturn
+  .methodend
+.classend

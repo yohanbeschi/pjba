@@ -1,0 +1,8 @@
+.class public super Lmul
+  .method public static lmul(JJ)J
+    lload_0
+    lload_2
+    lmul
+    lreturn
+  .methodend
+.classend

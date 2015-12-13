@@ -1,0 +1,8 @@
+.class public super Irem
+  .method public static irem(II)I
+    iload_0
+    iload_1
+    irem
+    ireturn
+  .methodend
+.classend

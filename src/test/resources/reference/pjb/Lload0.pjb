@@ -1,0 +1,6 @@
+.class public super Lload0
+  .method public static lload_0(J)J
+    lload_0
+    lreturn
+  .methodend
+.classend

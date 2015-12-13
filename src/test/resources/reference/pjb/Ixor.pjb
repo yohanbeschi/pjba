@@ -1,0 +1,8 @@
+.class public super Ixor
+  .method public static ixor(II)I
+    iload_0
+    iload_1
+    ixor
+    ireturn
+  .methodend
+.classend

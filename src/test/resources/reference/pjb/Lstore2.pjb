@@ -1,0 +1,10 @@
+.class public super Lstore2
+  .method public static lstore_2(JJJ)J
+    lload_0
+    lstore_2
+    lload 4
+    lload_2
+    ladd
+    lreturn
+  .methodend
+.classend

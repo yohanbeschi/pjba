@@ -1,0 +1,6 @@
+.class public super AConstNull
+  .method public static aconst_null()Ljava/lang/Object;
+    aconst_null
+    areturn
+  .methodend
+.classend

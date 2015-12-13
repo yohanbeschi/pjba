@@ -1,0 +1,8 @@
+.class public super Dstore
+  .method public static dstore(DZZZZZZZZZD)D
+    dload_0
+    dstore 10
+    dload 10
+    dreturn
+  .methodend
+.classend

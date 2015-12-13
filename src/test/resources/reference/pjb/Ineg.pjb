@@ -1,0 +1,7 @@
+.class public super Ineg
+  .method public static ineg(I)I
+    iload_0
+    ineg
+    ireturn
+  .methodend
+.classend

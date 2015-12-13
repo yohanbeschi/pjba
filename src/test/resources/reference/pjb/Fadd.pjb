@@ -1,0 +1,8 @@
+.class public super Fadd
+  .method public static fadd(FF)F
+    fload_0
+    fload_1
+    fadd
+    freturn
+  .methodend
+.classend

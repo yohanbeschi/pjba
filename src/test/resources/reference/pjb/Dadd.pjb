@@ -1,0 +1,8 @@
+.class public super Dadd
+  .method public static dadd(DD)D
+    dload_0
+    dload_2
+    dadd
+    dreturn
+  .methodend
+.classend

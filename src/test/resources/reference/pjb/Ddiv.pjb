@@ -1,0 +1,8 @@
+.class public super Ddiv
+  .method public static ddiv(DD)D
+    dload_0
+    dload_2
+    ddiv
+    dreturn
+  .methodend
+.classend

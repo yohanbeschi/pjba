@@ -1,0 +1,8 @@
+.class public super Ldiv
+  .method public static ldiv(JJ)J
+    lload_0
+    lload_2
+    ldiv
+    lreturn
+  .methodend
+.classend

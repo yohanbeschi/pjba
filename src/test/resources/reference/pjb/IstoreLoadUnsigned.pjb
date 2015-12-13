@@ -1,0 +1,8 @@
+.class public super IstoreLoadUnsigned
+  .method public static istore_load_unsigned()I
+    sipush 7687
+    istore 230
+    iload 230
+    ireturn
+  .methodend
+.classend

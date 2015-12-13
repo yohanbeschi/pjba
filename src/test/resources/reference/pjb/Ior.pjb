@@ -1,0 +1,8 @@
+.class public super Ior
+  .method public static ior(II)I
+    iload_0
+    iload_1
+    ior
+    ireturn
+  .methodend
+.classend

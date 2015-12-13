@@ -1,0 +1,8 @@
+.class public super Fdiv
+  .method public static fdiv(FF)F
+    fload_0
+    fload_1
+    fdiv
+    freturn
+  .methodend
+.classend

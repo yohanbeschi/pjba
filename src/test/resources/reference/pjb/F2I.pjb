@@ -1,0 +1,7 @@
+.class public super F2I
+  .method public static f2i(F)I
+    fload_0
+    f2i
+    ireturn
+  .methodend
+.classend

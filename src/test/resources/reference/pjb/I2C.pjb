@@ -1,0 +1,7 @@
+.class public super I2C
+  .method public static i2c(I)I
+    iload_0
+    i2c
+    ireturn
+  .methodend
+.classend
