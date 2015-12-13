@@ -19,7 +19,7 @@ public class ClassFile implements Visitable {
 
   private PjbaList<Constant.ConstantPoolEntry> constantPool = new PjbaList<>();
 
-  private int accessFlags = 0x0020; // super
+  private int accessFlags = MODIFIER_SUPER;
 
   private int thisClass;
   private int superClass;

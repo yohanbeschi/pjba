@@ -10,8 +10,6 @@ import org.isk.pjba.builder.MethodBuilder;
 import org.isk.pjba.structure.ClassFile;
 
 public class ClassFileGenerator {
-  private static String subfixClassName = "";
-
   private final ClassFileBuilder classFileBuilder;
   private MethodBuilder methodBuilder;
 
@@ -19,9 +17,9 @@ public class ClassFileGenerator {
     this.classFileBuilder = classFileBuilder;
   }
 
-  public static ClassFileGenerator newPublicClass(final String fullyQualifiedName) {
-    return new ClassFileGenerator(
-        new ClassFileBuilder(ClassFile.MODIFIER_PUBLIC, fullyQualifiedName + subfixClassName));
+  public static ClassFileGenerator newPublicClass(final String fullyQualifiedName, final String subfix) {
+    final String fullyQualifiedNameSubfixed = fullyQualifiedName + subfix;
+    return new ClassFileGenerator(new ClassFileBuilder(ClassFile.MODIFIER_PUBLIC, fullyQualifiedNameSubfixed));
   }
 
   public ClassFileGenerator publicStaticMethod(final String methodName, final String descriptor) {
@@ -36,9 +34,5 @@ public class ClassFileGenerator {
 
   public ClassFile build() {
     return this.classFileBuilder.build();
-  }
-
-  public static void subfixClassName(final String subfixClassName) {
-    ClassFileGenerator.subfixClassName = subfixClassName;
   }
 }

@@ -4,8 +4,14 @@ import static org.isk.pjba.assembler.ClassFileTestData.*;
 import static org.isk.pjba.assembler.MethodTester.$;
 // import static org.isk.pjba.assembler.ClassFileTestData.*;
 
+import java.io.ByteArrayOutputStream;
+import java.io.DataOutput;
+import java.io.DataOutputStream;
+import java.io.InputStream;
 import java.util.Arrays;
+import java.util.function.Function;
 
+import org.isk.pjba.Assembler;
 import org.isk.pjba.PjbaClassLoader;
 import org.isk.pjba.structure.ClassFile;
 import org.junit.runners.Parameterized.Parameters;
@@ -185,13 +191,41 @@ public abstract class ParameterizedClassFile {
     });
   }
 
-  protected final ClassFile classFile;
+  protected final Function<String, ClassFile> classFileGenerator;
   protected final MethodTester methodTester;
 
-  public ParameterizedClassFile(final String testName, final ClassFile classFile, final MethodTester methodTester) {
+  public ParameterizedClassFile(final String testName, final Function<String, ClassFile> classFileGenerator,
+      final MethodTester methodTester) {
     super();
-    this.classFile = classFile;
+    this.classFileGenerator = classFileGenerator;
     this.methodTester = methodTester;
     PjbaClassLoader.reset();
+  }
+
+  protected ByteArrayOutputStream assemble(final ClassFile classFile) {
+    final ByteArrayOutputStream baos = new ByteArrayOutputStream();
+    final DataOutput bytecode = new DataOutputStream(baos);
+    Assembler.assemble(classFile, bytecode);
+    return baos;
+  }
+
+  protected InputStream getReferenceClass(final String javaClass) {
+    return Thread.currentThread().getContextClassLoader()
+        .getResourceAsStream("reference/class/" + javaClass + ".class");
+  }
+
+  protected byte[] toBytes(final InputStream inputStream) {
+    final ByteArrayOutputStream baos = new ByteArrayOutputStream();
+    final byte[] buffer = new byte[1024];
+    int read = 0;
+    try {
+      while ((read = inputStream.read(buffer, 0, buffer.length)) != -1) {
+        baos.write(buffer, 0, read);
+      }
+      baos.flush();
+    } catch (final Exception e) {
+      throw new RuntimeException("Something went wrong!", e);
+    }
+    return baos.toByteArray();
   }
 }

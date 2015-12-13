@@ -21,7 +21,7 @@ public class ShortArgMetaInstruction extends MetaInstruction {
     this.opcode = instructionBuilder.buildInstruction(SHORT_ZERO).getOpcode();
   }
 
-  public Instruction buildInstruction(final short s) {
+  public Instruction buildInstruction(final int s) {
     return this.instructionBuilder.buildInstruction(s);
   }
 }
