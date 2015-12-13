@@ -996,7 +996,7 @@ public class PjbaTokenizerTest {
 
   @Test
   public void getNextToken_ok1() {
-    PjbaTokenizerTester.fromFile("ok01.pjb") //
+    PjbaTokenizerTester.fromFile("parser/ok01.pjb") //
         .getNextToken().assertTokenType(PjbaTokenType.DIR_CLASS_START).value(".class").start(1, 1).end(1, 7)
         .assertNoErrors() //
         .getNextToken().assertTokenType(CoreTokenType.WHITESPACE).value(" ").start(1, 7).end(1, 8).assertNoErrors() //
@@ -1011,7 +1011,7 @@ public class PjbaTokenizerTest {
 
   @Test
   public void getNextToken_ok2() {
-    PjbaTokenizerTester.fromFile("ok02.pjb") //
+    PjbaTokenizerTester.fromFile("parser/ok02.pjb") //
         .getNextToken().assertTokenType(PjbaTokenType.DIR_CLASS_START).value(".class").start(1, 1).end(1, 7)
         .assertNoErrors() //
         .getNextToken().assertTokenType(CoreTokenType.WHITESPACE).value(" ").start(1, 7).end(1, 8).assertNoErrors() //
@@ -1056,7 +1056,7 @@ public class PjbaTokenizerTest {
 
   @Test
   public void getNextToken_ok3() {
-    PjbaTokenizerTester.fromFile("ok03.pjb") //
+    PjbaTokenizerTester.fromFile("parser/ok03.pjb") //
         .getNextToken().assertTokenType(PjbaTokenType.OL_COMMENT).value("@ Comment ").start(1, 1).end(1, 11)
         .assertNoErrors() //
         .getNextToken().assertTokenType(CoreTokenType.NEW_LINE).value("\n").start(1, 11).end(2, 1).assertNoErrors() //
